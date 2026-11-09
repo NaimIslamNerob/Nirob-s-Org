@@ -1,0 +1,7 @@
+{
+  "name": "Nirofy",
+  "description": "Personal portfolio, real-time messaging, gallery, and live chess platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
