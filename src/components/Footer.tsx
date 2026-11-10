@@ -14,7 +14,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-xl bg-white p-1 flex items-center justify-center overflow-hidden border border-slate-700/80 shadow-md">
               <img
-                src="/assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
+                src="./assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
                 alt="Nirofy Logo"
                 className="w-full h-full object-contain"
               />

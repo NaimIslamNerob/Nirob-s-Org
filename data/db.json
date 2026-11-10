@@ -2,75 +2,54 @@
   "users": [
     {
       "id": "admin",
-      "username": "Nirofy",
-      "email": "naimislamnerob8@gmail.com",
       "role": "admin",
+      "email": "naimislamnerob8@gmail.com",
+      "lastSeen": "2026-11-09T15:34:05.515Z",
+      "username": "Nirofy",
+      "createdAt": "2026-01-01T00:00:00.000Z",
       "passwordHash": "GOOGLE_OAUTH_PROTECTED",
       "passwordSalt": "GOOGLE_SALT",
-      "encryptedPassword": "3155aede65a053883811d0a1:d608d9fdfc5708b3fb43300f4e66b05c:d7de137f683b15ac3e787c00bf0e2bd2c0da063b8b",
-      "createdAt": "2026-01-01T00:00:00.000Z",
-      "lastSeen": "2026-11-09T15:34:05.515Z"
+      "encryptedPassword": "3155aede65a053883811d0a1:d608d9fdfc5708b3fb43300f4e66b05c:d7de137f683b15ac3e787c00bf0e2bd2c0da063b8b"
     },
     {
       "id": "guest_1793908458267_akrdw",
-      "username": "grandmaster_guest",
-      "email": "guest@example.com",
       "role": "guest",
+      "email": "guest@example.com",
+      "lastSeen": "2026-11-05T19:54:18.267Z",
+      "username": "grandmaster_guest",
+      "createdAt": "2026-11-05T19:54:18.267Z",
       "passwordHash": "145b790b57d73bc9cfad9eecc1d63df4fe4f87d3f6c8eedb7d974c1d947fd535",
       "passwordSalt": "c8bbbea17a5b2d49c99b1347cf005560",
-      "encryptedPassword": "8fb1b845d1dddde0ef05e49d:63f0f5f3f0493e249b6b9bf052491d78:db011cd4e8fcf7dabf1190f4f51e871c1f",
-      "createdAt": "2026-11-05T19:54:18.267Z",
-      "lastSeen": "2026-11-05T19:54:18.267Z"
+      "encryptedPassword": "8fb1b845d1dddde0ef05e49d:63f0f5f3f0493e249b6b9bf052491d78:db011cd4e8fcf7dabf1190f4f51e871c1f"
     }
   ],
   "profile": {
-    "fullName": "Naim Islam Nerob",
-    "nickname": "Nirofy",
-    "tagline": "Crafting high-performance digital systems, exploring AI, and playing strategic live chess.",
-    "avatarUrl": "/assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg",
     "bio": "Hello, I am Naim Islam Nerob, widely known as Nirofy. I am passionate about crafting high-performance digital experiences, exploring artificial intelligence, playing strategic live chess, and building meaningful connections.",
-    "school": "Government Laboratory High School",
-    "college": "Notre Dame College",
-    "university": "University of Engineering and Technology (CSE)",
-    "location": "Dhaka, Bangladesh",
-    "educationDetails": [
+    "notes": [
       {
-        "id": "edu-1",
-        "institution": "Government Laboratory High School",
-        "degree": "Secondary School Certificate (Science)",
-        "field": "Science",
-        "period": "2016 – 2020",
-        "grade": "GPA 5.00 / 5.00",
-        "level": "School",
-        "location": "Dhaka, Bangladesh",
-        "description": "Graduated with high honors, active member of science club and junior chess team champion.",
-        "isCurrent": false
+        "id": "note-1",
+        "date": "Nov 2026",
+        "title": "The Art of Calculation in Rapid Chess",
+        "content": "In 5-minute rapid chess, intuition and tactical pattern recognition outweigh deep brute-force analysis. A sound pawn structure and active piece placement consistently yield practical winning chances.",
+        "category": "Chess"
       },
       {
-        "id": "edu-2",
-        "institution": "Notre Dame College",
-        "degree": "Higher Secondary Certificate (Science)",
-        "field": "Science",
-        "period": "2020 – 2022",
-        "grade": "GPA 5.00 / 5.00",
-        "level": "College",
-        "location": "Dhaka, Bangladesh",
-        "description": "Focus on advanced physics, mathematics, and computing sciences. NDIT Club executive.",
-        "isCurrent": false
+        "id": "note-2",
+        "date": "Oct 2026",
+        "title": "Building Real-Time Multi-User Web Experiences",
+        "content": "Modern collaborative web applications require server-authoritative state synchronizations with optimistic local updates. WebSockets provide the sub-50ms responsiveness required for seamless interactivity.",
+        "category": "Tech"
       },
       {
-        "id": "edu-3",
-        "institution": "University of Engineering and Technology",
-        "degree": "B.Sc. in Computer Science and Engineering",
-        "field": "Computer Science & Engineering",
-        "period": "2022 – Present",
-        "grade": "First Class Honours (Pursuing)",
-        "level": "University",
-        "location": "Dhaka, Bangladesh",
-        "description": "Specializing in distributed systems, full-stack architectures, algorithms, and AI systems.",
-        "isCurrent": true
+        "id": "note-3",
+        "date": "Aug 2026",
+        "title": "Lessons from Competitive Programming",
+        "content": "Breaking down multifaceted real-world engineering hurdles mirrors greedy algorithms and dynamic programming: decompose into independent subproblems, optimize edge cases, and test rigor.",
+        "category": "Algorithms"
       }
     ],
+    "title": "Software Engineer & Competitive Chess Strategist",
+    "school": "Government Laboratory High School",
     "skills": [
       "TypeScript",
       "React",
@@ -81,43 +60,12 @@
       "WebSockets",
       "PostgreSQL"
     ],
-    "notes": [
-      {
-        "id": "note-1",
-        "title": "The Art of Calculation in Rapid Chess",
-        "date": "Nov 2026",
-        "category": "Chess",
-        "content": "In 5-minute rapid chess, intuition and tactical pattern recognition outweigh deep brute-force analysis. A sound pawn structure and active piece placement consistently yield practical winning chances."
-      },
-      {
-        "id": "note-2",
-        "title": "Building Real-Time Multi-User Web Experiences",
-        "date": "Oct 2026",
-        "category": "Tech",
-        "content": "Modern collaborative web applications require server-authoritative state synchronizations with optimistic local updates. WebSockets provide the sub-50ms responsiveness required for seamless interactivity."
-      },
-      {
-        "id": "note-3",
-        "title": "Lessons from Competitive Programming",
-        "date": "Aug 2026",
-        "category": "Algorithms",
-        "content": "Breaking down multifaceted real-world engineering hurdles mirrors greedy algorithms and dynamic programming: decompose into independent subproblems, optimize edge cases, and test rigor."
-      }
-    ],
-    "achievements": [
-      {
-        "title": "Divisional Chess Championship Winner",
-        "year": "2025",
-        "description": "Secured 1st place with an unbeaten 7/7 score in the Open Classical & Rapid Category."
-      },
-      {
-        "title": "National Hackathon Finalist",
-        "year": "2024",
-        "description": "Built a collaborative peer learning platform with sub-second synchronization."
-      }
-    ],
-    "title": "Software Engineer & Competitive Chess Strategist",
-    "statusBadge": "🟢 Open for Live Chess Challenges & Collaborations",
+    "college": "Notre Dame College",
+    "tagline": "Crafting high-performance digital systems, exploring AI, and playing strategic live chess.",
+    "fullName": "Naim Islam Nerob",
+    "location": "Dhaka, Bangladesh",
+    "nickname": "Nirofy",
+    "avatarUrl": "/assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg",
     "highlights": [
       {
         "id": "hl-1",
@@ -139,6 +87,58 @@
         "label": "Residence",
         "value": "Dhaka, Bangladesh"
       }
+    ],
+    "university": "University of Engineering and Technology (CSE)",
+    "statusBadge": "🟢 Open for Live Chess Challenges & Collaborations",
+    "achievements": [
+      {
+        "year": "2025",
+        "title": "Divisional Chess Championship Winner",
+        "description": "Secured 1st place with an unbeaten 7/7 score in the Open Classical & Rapid Category."
+      },
+      {
+        "year": "2024",
+        "title": "National Hackathon Finalist",
+        "description": "Built a collaborative peer learning platform with sub-second synchronization."
+      }
+    ],
+    "educationDetails": [
+      {
+        "id": "edu-1",
+        "field": "Science",
+        "grade": "GPA 5.00 / 5.00",
+        "level": "School",
+        "degree": "Secondary School Certificate (Science)",
+        "period": "2016 – 2020",
+        "location": "Dhaka, Bangladesh",
+        "isCurrent": false,
+        "description": "Graduated with high honors, active member of science club and junior chess team champion.",
+        "institution": "Government Laboratory High School"
+      },
+      {
+        "id": "edu-2",
+        "field": "Science",
+        "grade": "GPA 5.00 / 5.00",
+        "level": "College",
+        "degree": "Higher Secondary Certificate (Science)",
+        "period": "2020 – 2022",
+        "location": "Dhaka, Bangladesh",
+        "isCurrent": false,
+        "description": "Focus on advanced physics, mathematics, and computing sciences. NDIT Club executive.",
+        "institution": "Notre Dame College"
+      },
+      {
+        "id": "edu-3",
+        "field": "Computer Science & Engineering",
+        "grade": "First Class Honours (Pursuing)",
+        "level": "University",
+        "degree": "B.Sc. in Computer Science and Engineering",
+        "period": "2022 – Present",
+        "location": "Dhaka, Bangladesh",
+        "isCurrent": true,
+        "description": "Specializing in distributed systems, full-stack architectures, algorithms, and AI systems.",
+        "institution": "University of Engineering and Technology"
+      }
     ]
   },
   "gallery": [
@@ -146,77 +146,77 @@
       "id": "photo-1",
       "title": "National Chess Championship Blitz Round",
       "caption": "Focus and calculation during a crucial round with the black pieces playing the Sicilian Defense.",
-      "imageUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1200&q=80",
       "category": "Chess",
-      "uploadedAt": "2026-10-12T14:30:00.000Z",
-      "folderId": "chess"
+      "folderId": "chess",
+      "imageUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-10-12T14:30:00.000Z"
     },
     {
       "id": "photo-2",
       "title": "Tech Campus & University Lawn",
       "caption": "Golden hour reflections after an inspiring day of algorithms and software engineering labs.",
-      "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
       "category": "Campus",
-      "uploadedAt": "2026-09-28T18:00:00.000Z",
-      "folderId": "campus"
+      "folderId": "campus",
+      "imageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-09-28T18:00:00.000Z"
     },
     {
       "id": "photo-3",
       "title": "Sunset over the River Delta",
       "caption": "Peaceful weekend getaway capturing the serene evening horizon.",
-      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
       "category": "Travel",
-      "uploadedAt": "2026-08-15T19:20:00.000Z",
-      "folderId": "travel"
+      "folderId": "travel",
+      "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-08-15T19:20:00.000Z"
     },
     {
       "id": "photo-4",
       "title": "Developer Workspace & Code Sprint",
       "caption": "Late night coding session developing real-time distributed applications.",
-      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
       "category": "Workspace",
-      "uploadedAt": "2026-07-04T22:15:00.000Z",
-      "folderId": "workspace"
+      "folderId": "workspace",
+      "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-07-04T22:15:00.000Z"
     },
     {
       "id": "photo-5",
       "title": "Classic Wooden Staunton Chess Set",
       "caption": "Study of endgame studies: King and Pawn mechanics and endgame fortresses.",
-      "imageUrl": "https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=1200&q=80",
       "category": "Chess",
-      "uploadedAt": "2026-06-20T11:00:00.000Z",
-      "folderId": "chess"
+      "folderId": "chess",
+      "imageUrl": "https://images.unsplash.com/photo-1586165368502-1bad197a6461?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-06-20T11:00:00.000Z"
     },
     {
       "id": "photo-6",
       "title": "Notre Dame College Fest Memories",
       "caption": "Revisiting the iconic college campus with dear batchmates and mentors.",
-      "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
       "category": "Campus",
-      "uploadedAt": "2026-05-18T16:45:00.000Z",
-      "folderId": "campus"
+      "folderId": "campus",
+      "imageUrl": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+      "uploadedAt": "2026-05-18T16:45:00.000Z"
     }
   ],
   "messages": [
     {
       "id": "msg-welcome",
+      "text": "Welcome to my official website! Feel free to send me a message here or challenge me to a game of live chess.",
+      "status": "read",
       "senderId": "admin",
+      "timestamp": "2026-11-05T19:54:13.005Z",
       "senderName": "Nirofy",
       "senderRole": "admin",
-      "recipientId": "guest-preview",
-      "text": "Welcome to my official website! Feel free to send me a message here or challenge me to a game of live chess.",
-      "timestamp": "2026-11-05T19:54:13.005Z",
-      "status": "read"
+      "recipientId": "guest-preview"
     },
     {
       "id": "msg_1793908458268",
+      "text": "Hello grandmaster_guest! Welcome to my personal website. Feel free to send me a message here or challenge me to a game of live chess!",
+      "status": "sent",
       "senderId": "admin",
+      "timestamp": "2026-11-05T19:54:18.268Z",
       "senderName": "Nirofy",
       "senderRole": "admin",
-      "recipientId": "guest_1793908458267_akrdw",
-      "text": "Hello grandmaster_guest! Welcome to my personal website. Feel free to send me a message here or challenge me to a game of live chess!",
-      "timestamp": "2026-11-05T19:54:18.268Z",
-      "status": "sent"
+      "recipientId": "guest_1793908458267_akrdw"
     }
   ],
   "chessGames": [],
@@ -224,127 +224,127 @@
   "socialLinks": [
     {
       "id": "link-1",
-      "platform": "Facebook",
-      "icon": "Facebook",
       "url": "https://facebook.com",
+      "icon": "Facebook",
+      "platform": "Facebook",
       "username": "Naim Islam Nerob",
       "badgeText": "Connect"
     },
     {
       "id": "link-2",
-      "platform": "Instagram",
-      "icon": "Instagram",
       "url": "https://instagram.com",
+      "icon": "Instagram",
+      "platform": "Instagram",
       "username": "@nirofy",
       "badgeText": "Follow"
     },
     {
       "id": "link-3",
-      "platform": "Chess.com",
-      "icon": "Crown",
       "url": "https://chess.com",
+      "icon": "Crown",
+      "platform": "Chess.com",
       "username": "NirofyMaster",
       "badgeText": "Play Chess"
     },
     {
       "id": "link-4",
-      "platform": "GitHub",
-      "icon": "Github",
       "url": "https://github.com",
+      "icon": "Github",
+      "platform": "GitHub",
       "username": "nirofy",
       "badgeText": "Open Source"
     },
     {
       "id": "link-5",
-      "platform": "LinkedIn",
-      "icon": "Linkedin",
       "url": "https://linkedin.com",
+      "icon": "Linkedin",
+      "platform": "LinkedIn",
       "username": "Naim Islam Nerob",
       "badgeText": "Professional"
     },
     {
       "id": "link-6",
-      "platform": "Direct Email",
-      "icon": "Mail",
       "url": "mailto:naimislamnerob8@gmail.com",
+      "icon": "Mail",
+      "platform": "Direct Email",
       "username": "naimislamnerob8@gmail.com",
       "badgeText": "Inquiries"
     }
   ],
   "coffeeConfig": {
-    "headline": "Support My Work & Studies",
-    "subtext": "If ",
-    "paymentLink": "https://buymeacoffee.com/nirofy",
-    "qrCodeUrl": "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://buymeacoffee.com/nirofy",
-    "currency": "USD",
     "amounts": [
       3,
       5,
       10,
       25
     ],
-    "customNoteAllowed": true,
+    "subtext": "If ",
+    "currency": "USD",
+    "headline": "Support My Work & Studies",
+    "qrCodeUrl": "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://buymeacoffee.com/nirofy",
+    "supporters": [
+      {
+        "id": "sup-1",
+        "cups": 3,
+        "date": "2026-11-01T10:00:00.000Z",
+        "name": "Grandmaster Fan",
+        "amount": 15,
+        "message": "Loved that Sicilian Dragon game! Keep producing great content Nirofy!"
+      },
+      {
+        "id": "sup-2",
+        "cups": 1,
+        "date": "2026-10-25T14:20:00.000Z",
+        "name": "Fellow NDian",
+        "amount": 5,
+        "message": "Proud of you brother, cheers!"
+      }
+    ],
+    "bkashNumber": "+880 1763854187",
+    "paymentLink": "https://buymeacoffee.com/nirofy",
+    "bkashLogoUrl": "/assets/aistudio/image_3f45f398.png",
+    "showBkashNumber": true,
     "supportedMethods": [
       "Card / Apple Pay / Google Pay",
       "PayPal",
       "bKash / Nagad (Optional)"
     ],
-    "supporters": [
-      {
-        "id": "sup-1",
-        "name": "Grandmaster Fan",
-        "cups": 3,
-        "amount": 15,
-        "message": "Loved that Sicilian Dragon game! Keep producing great content Nirofy!",
-        "date": "2026-11-01T10:00:00.000Z"
-      },
-      {
-        "id": "sup-2",
-        "name": "Fellow NDian",
-        "cups": 1,
-        "amount": 5,
-        "message": "Proud of you brother, cheers!",
-        "date": "2026-10-25T14:20:00.000Z"
-      }
-    ],
-    "bkashNumber": "+880 1763854187",
-    "showBkashNumber": true,
-    "bkashLogoUrl": "/assets/aistudio/image_3f45f398.png"
+    "customNoteAllowed": true
   },
   "folders": [
     {
       "id": "chess",
       "name": "Chess Tournaments",
+      "createdAt": "2026-01-01T00:00:00.000Z",
       "description": "Classical and rapid chess events, trophies, boards, and championship moments",
-      "coverImageUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-01-01T00:00:00.000Z"
+      "coverImageUrl": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "campus",
       "name": "Campus Life & Education",
+      "createdAt": "2026-01-01T00:00:00.000Z",
       "description": "Memories from school, Notre Dame College, and university labs",
-      "coverImageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-01-01T00:00:00.000Z"
+      "coverImageUrl": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "travel",
       "name": "Travel & Nature",
+      "createdAt": "2026-01-01T00:00:00.000Z",
       "description": "Scenic getaways, river deltas, sunsets, and expeditions",
-      "coverImageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-01-01T00:00:00.000Z"
+      "coverImageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "workspace",
       "name": "Developer & Workstation",
+      "createdAt": "2026-01-01T00:00:00.000Z",
       "description": "Engineering sprints, coding setup, algorithms, and hackathons",
-      "coverImageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-      "createdAt": "2026-01-01T00:00:00.000Z"
+      "coverImageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
     },
     {
       "id": "folder_1793909794784_j5a4",
       "name": "National Tournaments",
-      "description": "Trophies, certificates and championship games",
-      "createdAt": "2026-11-05T20:16:34.784Z"
+      "createdAt": "2026-11-05T20:16:34.784Z",
+      "description": "Trophies, certificates and championship games"
     }
   ],
   "sessions": {

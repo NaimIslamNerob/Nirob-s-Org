@@ -831,7 +831,7 @@ create policy "Allow public all access" on public.app_state
         <div className="flex items-center gap-3.5">
           <div className="w-12 h-12 rounded-2xl bg-white p-1 flex items-center justify-center overflow-hidden border border-slate-700/80 shadow-lg">
             <img
-              src="/assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
+              src="./assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
               alt="Nirofy"
               className="w-full h-full object-contain"
             />
@@ -2140,7 +2140,7 @@ create policy "Allow public all access" on public.app_state
                 <label className="block text-xs font-medium text-slate-300 mb-1">bKash Logo Image URL / Path</label>
                 <input
                   type="text"
-                  value={coffeeForm.bkashLogoUrl || '/assets/aistudio/image_3f45f398.png'}
+                  value={coffeeForm.bkashLogoUrl || './assets/aistudio/image_3f45f398.png'}
                   onChange={(e) => setCoffeeForm({ ...coffeeForm, bkashLogoUrl: e.target.value })}
                   className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white"
                 />

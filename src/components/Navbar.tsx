@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="w-9 h-9 rounded-xl bg-white p-1 shadow-md shadow-sky-950/50 flex items-center justify-center overflow-hidden border border-slate-700/80 group-hover:scale-105 transition-transform">
               <img
-                src="/assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
+                src="./assets/aistudio/bf806f74-d653-4af6-b7be-37ab74ecbf98_b6272376.jpg"
                 alt="Nirofy Logo"
                 className="w-full h-full object-contain"
               />

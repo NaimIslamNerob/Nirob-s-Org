@@ -59,7 +59,7 @@ export const CoffeePage: React.FC<CoffeePageProps> = ({
 
   const bkashNumber = config.bkashNumber || '+880 1763854187';
   const showNumber = config.showBkashNumber !== false;
-  const bkashLogo = config.bkashLogoUrl || '/assets/aistudio/image_3f45f398.png';
+  const bkashLogo = config.bkashLogoUrl || './assets/aistudio/image_3f45f398.png';
 
   const handleCopyNumber = () => {
     navigator.clipboard.writeText(bkashNumber);

@@ -10,6 +10,8 @@ class SocketService {
 
   connect() {
     if (typeof window === 'undefined') return;
+    // GitHub Pages is purely static and does not host WebSockets
+    if (window.location.hostname.endsWith('github.io')) return;
     if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) {
       return;
     }

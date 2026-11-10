@@ -214,7 +214,7 @@ const MainApp: React.FC = () => {
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-2xl overflow-hidden bg-pink-600/30 border border-pink-500/50 p-1 shrink-0 flex items-center justify-center">
               <img
-                src="/assets/aistudio/image_3f45f398.png"
+                src="./assets/aistudio/image_3f45f398.png"
                 alt="bKash"
                 className="w-full h-full object-contain"
               />
