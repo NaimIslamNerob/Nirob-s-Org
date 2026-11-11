@@ -107,110 +107,33 @@ async function saveToSupabaseAndLocal(key: string, data: any): Promise<void> {
 
 export const api = {
   // Auth
-  register: async (body: { username: string; password: string; email?: string }) => {
-    try {
-      return await fetchJSON<{ token: string; user: User }>('/api/auth/register', {
-        method: 'POST',
-        body: JSON.stringify(body),
-      });
-    } catch (err: any) {
-      // Fallback for GitHub Pages static hosting
-      const users = await loadFromSupabaseOrLocal<any[]>('users', []);
-      const trimmed = body.username.trim();
-      const exists = users.some((u: any) => u.username?.toLowerCase() === trimmed.toLowerCase());
-      if (exists || trimmed.toLowerCase() === 'admin' || trimmed.toLowerCase() === 'nirofy') {
-        throw new Error(`Username "${trimmed}" is already taken.`);
-      }
-      const newUser: User = {
-        id: `guest_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
-        username: trimmed,
-        email: body.email?.trim() || undefined,
-        role: 'guest',
-        createdAt: new Date().toISOString(),
-      };
-      const token = 'gh_guest_' + Date.now();
-      setStoredToken(token);
-      localStorage.setItem('nirofy_current_user', JSON.stringify(newUser));
-      users.push({ ...newUser, password: body.password });
-      await saveToSupabaseAndLocal('users', users);
-      return { token, user: newUser };
-    }
-  },
+  register: (body: { username: string; password: string; email?: string }) =>
+    fetchJSON<{ token: string; user: User }>('/api/auth/register', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
 
-  login: async (body: { identifier: string; password: string }) => {
-    try {
-      return await fetchJSON<{ token: string; user: User }>('/api/auth/login', {
-        method: 'POST',
-        body: JSON.stringify(body),
-      });
-    } catch (err: any) {
-      // Fallback for GitHub Pages static hosting
-      const trimmed = body.identifier.trim().toLowerCase();
-      if (trimmed === 'admin' || trimmed === 'nirofy' || trimmed === 'naimislamnerob8@gmail.com') {
-        if (['nerob2026', 'nirofy'].includes(body.password.trim().toLowerCase())) {
-          return await api.adminPasscodeLogin(body.password);
-        }
-      }
-      const users = await loadFromSupabaseOrLocal<any[]>('users', []);
-      const userObj = users.find(
-        (u: any) =>
-          u.username?.toLowerCase() === trimmed || (u.email && u.email?.toLowerCase() === trimmed)
-      );
-      if (userObj && (!userObj.password || userObj.password === body.password)) {
-        const guestUser: User = {
-          id: userObj.id || `guest_${Date.now()}`,
-          username: userObj.username,
-          email: userObj.email,
-          role: 'guest',
-          createdAt: userObj.createdAt || new Date().toISOString(),
-        };
-        const token = 'gh_guest_' + Date.now();
-        setStoredToken(token);
-        localStorage.setItem('nirofy_current_user', JSON.stringify(guestUser));
-        return { token, user: guestUser };
-      }
-      throw new Error('Invalid username/email or password.');
-    }
-  },
+  login: (body: { identifier: string; password: string }) =>
+    fetchJSON<{ token: string; user: User }>('/api/auth/login', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
 
-  googleAdminLogin: async (body: { email: string; displayName?: string | null }) => {
-    try {
-      return await fetchJSON<{ token: string; user: User }>('/api/auth/google-admin', {
-        method: 'POST',
-        body: JSON.stringify(body),
-      });
-    } catch (err: any) {
-      if (body.email?.toLowerCase() === 'naimislamnerob8@gmail.com') {
-        const adminUser: User = {
-          id: 'admin',
-          username: 'Nirofy',
-          email: 'naimislamnerob8@gmail.com',
-          role: 'admin',
-          createdAt: '2026-01-01T00:00:00.000Z',
-        };
-        const token = 'gh_admin_' + Date.now();
-        setStoredToken(token);
-        localStorage.setItem('nirofy_current_user', JSON.stringify(adminUser));
-        return { token, user: adminUser };
-      }
-      throw err;
-    }
-  },
+  googleAdminLogin: (body: { email: string; displayName?: string | null }) =>
+    fetchJSON<{ token: string; user: User }>('/api/auth/google-admin', {
+      method: 'POST',
+      body: JSON.stringify(body),
+    }),
 
   adminPasscodeLogin: async (passcode: string) => {
-    const trimmed = (passcode || '').trim();
-    if (!trimmed) {
-      throw new Error('Please enter the administrator password.');
-    }
     try {
       return await fetchJSON<{ token: string; user: User }>('/api/auth/admin-passcode', {
         method: 'POST',
-        body: JSON.stringify({ passcode: trimmed }),
+        body: JSON.stringify({ passcode }),
       });
     } catch (err: any) {
       // Fallback for static hosting (GitHub Pages) where backend /api is unavailable
-      const normalized = trimmed.toLowerCase();
-      if (['nerob2026', 'nirofy'].includes(normalized)) {
+      if (passcode === 'nerob2026') {
         const adminUser: User = {
           id: 'admin',
           username: 'Nirofy',
@@ -220,10 +143,9 @@ export const api = {
         };
         const token = 'gh_admin_' + Date.now();
         setStoredToken(token);
-        localStorage.setItem('nirofy_current_user', JSON.stringify(adminUser));
         return { token, user: adminUser };
       }
-      throw new Error('Access Denied: Invalid administrator password.');
+      throw new Error('Invalid Admin Passcode');
     }
   },
 
@@ -232,13 +154,7 @@ export const api = {
       return await fetchJSON<User>('/api/auth/me');
     } catch (err) {
       const token = getStoredToken();
-      if (token && (token.startsWith('gh_admin_') || token.startsWith('admin_') || token.startsWith('gh_'))) {
-        const cached = localStorage.getItem('nirofy_current_user');
-        if (cached) {
-          try {
-            return JSON.parse(cached) as User;
-          } catch (e) {}
-        }
+      if (token && token.startsWith('gh_admin_')) {
         return {
           id: 'admin',
           username: 'Nirofy',
