@@ -78,6 +78,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const res = await api.login({ identifier, password: pass });
     setStoredToken(res.token);
     setUser(res.user);
+    try {
+      localStorage.setItem('nirofy_current_user', JSON.stringify(res.user));
+    } catch (e) {}
     socket.reauth();
     setIsAuthModalOpen(false);
   };
@@ -86,6 +89,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const res = await api.register({ username, password: pass, email });
     setStoredToken(res.token);
     setUser(res.user);
+    try {
+      localStorage.setItem('nirofy_current_user', JSON.stringify(res.user));
+    } catch (e) {}
     socket.reauth();
     setIsAuthModalOpen(false);
   };
@@ -102,6 +108,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
       setStoredToken(res.token);
       setUser(res.user);
+      try {
+        localStorage.setItem('nirofy_current_user', JSON.stringify(res.user));
+      } catch (e) {}
       socket.reauth();
       setIsAuthModalOpen(false);
     } catch (error: any) {
@@ -115,6 +124,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const res = await api.adminPasscodeLogin(passcode);
       setStoredToken(res.token);
       setUser(res.user);
+      try {
+        localStorage.setItem('nirofy_current_user', JSON.stringify(res.user));
+      } catch (e) {}
       socket.reauth();
       setIsAuthModalOpen(false);
     } catch (error: any) {
@@ -130,6 +142,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } catch (err) {
       clearStoredToken();
     } finally {
+      try {
+        localStorage.removeItem('nirofy_current_user');
+      } catch (e) {}
+      clearStoredToken();
       setUser(null);
       socket.reauth();
     }
