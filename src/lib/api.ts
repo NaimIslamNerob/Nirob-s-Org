@@ -147,7 +147,7 @@ export const api = {
       // Fallback for GitHub Pages static hosting
       const trimmed = body.identifier.trim().toLowerCase();
       if (trimmed === 'admin' || trimmed === 'nirofy' || trimmed === 'naimislamnerob8@gmail.com') {
-        if (['nerob2026', 'nirofy', 'admin'].includes(body.password.trim().toLowerCase())) {
+        if (['nerob2026', 'nirofy'].includes(body.password.trim().toLowerCase())) {
           return await api.adminPasscodeLogin(body.password);
         }
       }
@@ -198,15 +198,19 @@ export const api = {
   },
 
   adminPasscodeLogin: async (passcode: string) => {
+    const trimmed = (passcode || '').trim();
+    if (!trimmed) {
+      throw new Error('Please enter the administrator password.');
+    }
     try {
       return await fetchJSON<{ token: string; user: User }>('/api/auth/admin-passcode', {
         method: 'POST',
-        body: JSON.stringify({ passcode }),
+        body: JSON.stringify({ passcode: trimmed }),
       });
     } catch (err: any) {
       // Fallback for static hosting (GitHub Pages) where backend /api is unavailable
-      const normalized = (passcode || '').trim().toLowerCase();
-      if (['nerob2026', 'nirofy', 'admin', 'nerob', 'naim', 'nirofy2026'].includes(normalized)) {
+      const normalized = trimmed.toLowerCase();
+      if (['nerob2026', 'nirofy'].includes(normalized)) {
         const adminUser: User = {
           id: 'admin',
           username: 'Nirofy',
@@ -219,7 +223,7 @@ export const api = {
         localStorage.setItem('nirofy_current_user', JSON.stringify(adminUser));
         return { token, user: adminUser };
       }
-      throw new Error('Invalid Admin Passcode. Accepted: nerob2026 or nirofy');
+      throw new Error('Access Denied: Invalid administrator password.');
     }
   },
 
